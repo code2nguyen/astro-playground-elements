@@ -13,6 +13,14 @@
     "type": "git",
     "url": "https://github.com/code2nguyen/astro-playground-elements.git"
   },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "workspaces": [
+    ".",
+    "demo"
+  ],
+  "homepage": "https://github.com/code2nguyen/astro-playground-elements#readme",
   "license": "MIT",
   "author": "code2nguyen@gmail.com",
   "type": "module",
@@ -65,11 +73,20 @@
     },
     "root": true
   },
+  "dependencies": {
+    "resolve": "^1.22.1"
+  },
+  "peerDependencies": {
+    "playground-elements": "*"
+  },
   "devDependencies": {
+    "@types/node": "^18.11.17",
+    "@types/resolve": "^1.20.2",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
     "astro": "^1.6.10",
     "eslint": "^8.28.0",
+    "tslib": "^2.4.1",
     "typescript": "^4.9.3"
   },
   "publishConfig": {
